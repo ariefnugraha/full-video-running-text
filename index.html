@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <video src="sample.mp4" controls autoplay></video>
+        <div class="running-text">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://weproperty.com.au/wp-content/uploads/2020/08/dummy-logo-5b.png" alt="">
+                </a>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas cum exercitationem
+                            voluptates beatae illo, earum recusandae ad nemo a porro blanditiis omnis hic quisquam
+                            aliquid officia nisi. Molestias, ad blanditiis?</a></li>
+                    <li><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, assumenda facere,
+                            repudiandae inventore molestias nostrum enim doloribus amet totam hic quisquam veritatis
+                            natus similique voluptate. Repellendus cum distinctio illo quod.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam suscipit tempore in
+                            laboriosam optio! Tenetur, doloremque voluptatem! Quidem exercitationem iusto error dolorem
+                            voluptate molestiae laboriosam magni magnam nulla consectetur! Illum.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto, impedit
+                            enim vitae excepturi quod harum quia debitis aut in officia commodi voluptatibus pariatur?
+                            Ipsum tempora temporibus consectetur quis accusantium.</a></li>
+                </ul>
+            </div>
+            <div class="time"></div>
+        </div>
+    </div>
+    <script>
+        let timeContainer = document.querySelector('.time');
+        setInterval(() => {
+            let date = new Date();
+            let getHour;
+            let getMinutes;
+            let getSeconds;
+
+            getHour = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours();
+            getMinutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+            getSeconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds()
+
+
+            timeContainer.innerText = `${getHour}:${getMinutes}:${getSeconds}`
+
+        }, 1000);
+    </script>
+</body>
+
+</html>
